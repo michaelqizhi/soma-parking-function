@@ -2,7 +2,7 @@ name: Offstreet automation every 2 hours
 
 on:
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: "*/59 * * * *"
   workflow_dispatch: # lets you manually trigger it if needed
 
 jobs:

@@ -1,6 +1,5 @@
 import asyncio
 import datetime
-import logging
 from playwright.async_api import async_playwright
 
 async def main():
@@ -24,7 +23,11 @@ async def main():
         await page.wait_for_selector(".confirmation-number", timeout=60000)
         confirmation_text = await page.text_content(".confirmation-number")
 
-        print(f"Confirmation number: {confirmation_text}")
+        if confirmation_text and confirmation_text.strip():
+            print(f"✅ Confirmation number: {confirmation_text.strip()}")
+        else:
+            print("❌ No confirmation number found — failing job.")
+            exit(1)
 
         await browser.close()
 
