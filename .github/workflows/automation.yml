@@ -1,4 +1,4 @@
-name: Offstreet automation every 2 hours
+name: soma tower parking renewal
 
 on:
   schedule:
