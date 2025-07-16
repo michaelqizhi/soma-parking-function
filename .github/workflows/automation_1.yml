@@ -1,9 +1,7 @@
-name: soma tower parking renewal
+name: soma tower parking renewal EE02U96
 
 on:
-  schedule:
-    - cron: "*/59 * * * *"
-  workflow_dispatch: # lets you manually trigger it if needed
+  workflow_dispatch: # keeps only manual trigger
 
 jobs:
   run-script:
@@ -24,4 +22,4 @@ jobs:
           playwright install chromium
 
       - name: Run the script
-        run: python offstreet_script.py
+        run: python offstreet_script_EE02U96.py
