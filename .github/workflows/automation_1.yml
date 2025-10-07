@@ -1,4 +1,4 @@
-name: soma tower parking renewal EE02U96
+name: soma tower parking renewal 9UDS722
 
 on:
   workflow_dispatch: # keeps only manual trigger
@@ -22,4 +22,4 @@ jobs:
           playwright install chromium
 
       - name: Run the script
-        run: python offstreet_script_EE02U96.py
+        run: python offstreet_script_9UDS722.py
