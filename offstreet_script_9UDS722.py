@@ -11,7 +11,14 @@ async def main():
         page = await browser.new_page()
 
         await page.goto("https://www.offstreet.io/location/8Q05MGGW")
-        await page.fill("#plate", "EE02U96")
+        
+        # Fill in your new license plate number
+        await page.fill("#plate", "9UDS722")
+        
+        # --- ADD THIS LINE ---
+        # Selects 'California' from the dropdown with the id 'region'
+        await page.select_option("#region", "California")
+        
         await page.get_by_role("button", name="Park").click()
 
         try:
